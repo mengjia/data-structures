@@ -18,13 +18,11 @@ public class Vector<T> {
 
 	public void set(int index,T value) {
 		
-		if(index < length) {
-			data[index] = value;
-		}
-		else if(index == Integer.MAX_VALUE) {
+		if(index == Integer.MAX_VALUE) {
 			throw new IllegalArgumentException("index must less than " + Integer.MAX_VALUE);
 		}
-		else {
+		
+		if(index > length) {			
 			int newLength = index + 1;
 			
 			Object[] newData = new Object[newLength];
@@ -34,6 +32,10 @@ public class Vector<T> {
 			this.length = newLength;
 			this.data = newData;
 		}
+		
+		data[index] = value;
+
+		
 	}
 	@SuppressWarnings("unchecked")
 	public T get(int index) {

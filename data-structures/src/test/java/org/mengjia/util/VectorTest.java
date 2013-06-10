@@ -28,8 +28,8 @@ public class VectorTest {
 	@Test
 	public void testSetData2() {
 		Vector<Integer> v = new Vector<Integer>();
-		v.set(Integer.MAX_VALUE-1, 100);
-		Assert.assertEquals(100, v.get(Integer.MAX_VALUE-1).intValue());
+		v.set(10000, 100);
+		Assert.assertEquals(100, v.get(10000).intValue());
 	}
 	
 }

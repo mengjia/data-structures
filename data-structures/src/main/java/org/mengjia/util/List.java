@@ -25,7 +25,28 @@ public class List<T> {
 	}
 	
 	public Iterator<T> iterator() {
-		return null;
+		return new Iterator<T>( ) {
+			int index;
+
+			@Override
+			public boolean hasNext() {
+
+				return index == this.size();
+			}
+
+			@Override
+			public T next() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public void remove() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		};
 	}
 	
 	public T[] toArray() {
